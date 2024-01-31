@@ -29,12 +29,13 @@
         - timezoneresult.changed
       tags: timezone
 
-- name: Check dns for host
-  ansible.builtin.command: host {{ ansible_hostname }}
-  register: ns
-  ignore_errors: true
-  changed_when: false
-  tags: etchosts
+# not necessary for the presentation 
+# - name: Check dns for host
+#   ansible.builtin.command: host {{ ansible_hostname }}
+#   register: ns
+#   ignore_errors: true
+#   changed_when: false
+#   tags: etchosts
 
 - name: Add host to /etc/hosts if needed
   ansible.builtin.lineinfile:
