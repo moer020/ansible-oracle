@@ -47,32 +47,32 @@ oracle_user_home: "/home/{{ oracle_user }}"
 grid_user_home: "/home/{{ _grid_install_user }}"
 
 # @var oracle_group:description: The name for the oinstall group.
-oracle_group: oinstall
+oracle_group: dba
 
 # @var oper_group:description: The os-group for sysoper role in Oracle RDBMS.
-oper_group: oper
+oper_group: dba
 
 # @var dba_group:description: The os-group for sysdba role in Oracle RDBMS.
 dba_group: dba
 
 # @var asmoper_group:description: The os-group for asmoper role in Oracle ASM.
-asmoper_group: asmoper
+asmoper_group: dba
 
 # @var asmdba_group:description: The os-group for asmdba role in Oracle ASM.
-asmdba_group: asmdba
+asmdba_group: dba
 
 # @var asmadmin_group:description: The os-group for asmadmin role in Oracle ASM.
-asmadmin_group: asmadmin
+asmadmin_group: dba
 
 # @var oracle_inventory_loc:description: Directory for central Oracle Inventory.
-oracle_inventory_loc: /u01/app/oraInventory
+oracle_inventory_loc: /DBA/oracle/oraInventory
 
 # @var oracle_stage:description: >
 # Defines the base directory for response files, configuration firles etc. for `ansible-oracle`.
 #
 # There is usually no need to change this variable.
 # @end
-oracle_stage: /u01/stage
+oracle_stage: /DBA/oracle/stage
 
 # @var oracle_rsp_stage:description: >
 # Defines the directory for response files for installation.
