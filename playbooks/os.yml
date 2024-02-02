@@ -5,12 +5,12 @@
   become: true
   any_errors_fatal: true
   roles:
-    - opitzconsulting.ansible_oracle.common
-    - opitzconsulting.ansible_oracle.orahost
-    - opitzconsulting.ansible_oracle.orahost_storage
-    - opitzconsulting.ansible_oracle.orahost_ssh
-    - opitzconsulting.ansible_oracle.cxoracle
-    - opitzconsulting.ansible_oracle.orahost_logrotate
+    - arvatosystems.ansible_oracle.common
+    - arvatosystems.ansible_oracle.orahost
+    - arvatosystems.ansible_oracle.orahost_storage
+    - arvatosystems.ansible_oracle.orahost_ssh
+    - arvatosystems.ansible_oracle.cxoracle
+    - arvatosystems.ansible_oracle.orahost_logrotate
 
   post_tasks:
     - name: Restart autofs

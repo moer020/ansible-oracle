@@ -4,4 +4,4 @@
 
 - name: ansible-oracle Collection version
   ansible.builtin.debug:
-    msg: "ansible-oracle version: {{ lookup('community.general.collection_version', 'opitzconsulting.ansible_oracle') }}"
+    msg: "ansible-oracle version: {{ lookup('community.general.collection_version', 'arvatosystems.ansible_oracle') }}"

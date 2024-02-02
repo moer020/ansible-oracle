@@ -1,6 +1,6 @@
 ---
 - name: db_opatch | Check current opatch version
-  opitzconsulting.ansible_oracle.oracle_opatch:
+  arvatosystems.ansible_oracle.oracle_opatch:
     oracle_home: "{{ oracle_home_db }}"
     state: opatchversion
   register: current_opatch_version
@@ -105,7 +105,7 @@
       when: db_homes_config[dbh.home]['opatch_minversion'] is defined
       block:
         - name: db_opatch | Check current opatch version 2
-          opitzconsulting.ansible_oracle.oracle_opatch:
+          arvatosystems.ansible_oracle.oracle_opatch:
             oracle_home: "{{ oracle_home_db }}"
             state: opatchversion
           register: current_opatch_version2

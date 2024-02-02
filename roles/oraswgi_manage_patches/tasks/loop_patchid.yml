@@ -41,7 +41,7 @@
 
 # opatchauto needs root user for execution
 - name: Manage patch with opatch (opatchauto / apply)
-  opitzconsulting.ansible_oracle.oracle_opatch:
+  arvatosystems.ansible_oracle.oracle_opatch:
     oracle_home: "{{ oracle_home_gi }}"
     patch_base: |-
       {{ oracle_patch_install }}/{{ oracle_install_version_gi }}/

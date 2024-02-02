@@ -5,5 +5,5 @@
   become: true
   any_errors_fatal: true
   roles:
-    - opitzconsulting.ansible_oracle.oraswdb_golden_image
-    - opitzconsulting.ansible_oracle.oraswgi_golden_image
+    - arvatosystems.ansible_oracle.oraswdb_golden_image
+    - arvatosystems.ansible_oracle.oraswgi_golden_image

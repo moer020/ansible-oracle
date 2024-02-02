@@ -1,6 +1,6 @@
 ---
 - name: Opatch-upgrade | Check current opatch version
-  opitzconsulting.ansible_oracle.oracle_opatch:
+  arvatosystems.ansible_oracle.oracle_opatch:
     oracle_home: "{{ oracle_home_gi }}"
     state: opatchversion
   register: current_opatch_version
@@ -59,7 +59,7 @@
     - oragridpatchunpack
 
 - name: Opatch-upgrade | Check current opatch version
-  opitzconsulting.ansible_oracle.oracle_opatch:
+  arvatosystems.ansible_oracle.oracle_opatch:
     oracle_home: "{{ oracle_home_gi }}"
     state: opatchversion
   register: current_opatch_version

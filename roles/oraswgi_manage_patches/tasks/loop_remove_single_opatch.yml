@@ -21,7 +21,7 @@
       ansible.builtin.include_tasks: roothas_prepatch.yml
 
     - name: loop_remove_single_opatch | Remove opatch apply patch from GI
-      opitzconsulting.ansible_oracle.oracle_opatch:
+      arvatosystems.ansible_oracle.oracle_opatch:
         oracle_home: "{{ oracle_home_gi }}"
         patch_base: "{{ oracle_patch_install }}/{{ oracle_install_version_gi }}/{{ gip_opatch.path | default(gip_opatch.patchid) }}/"
         patch_id: "{{ gip_opatch.patchid }}"

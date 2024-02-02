@@ -10,7 +10,7 @@
         allow_duplicates: false
 
     - name: manage pdb(s)
-      opitzconsulting.ansible_oracle.oracle_pdb:
+      arvatosystems.ansible_oracle.oracle_pdb:
         name: "{{ odb[1].pdb_name }}"
         sourcedb: "{{ odb[1].cdb }}"
         datafile_dest: "{{ odb[1].datafile_dest | default(omit) }}"

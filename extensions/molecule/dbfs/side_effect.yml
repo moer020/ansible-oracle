@@ -1,7 +1,7 @@
 ---
 # This playbook is a special step in molecule.
 - name: Side-Effect - DB-Patching 19.20
-  ansible.builtin.import_playbook: opitzconsulting.ansible_oracle.opatch
+  ansible.builtin.import_playbook: arvatosystems.ansible_oracle.opatch
   vars:
     is_sw_source_local: true
     oracle_sw_copy: true
@@ -12,10 +12,10 @@
         apply_patches: true
 
 - name: Side-Effect - DB-Patching 19.20
-  ansible.builtin.import_playbook: opitzconsulting.ansible_oracle.opatch
+  ansible.builtin.import_playbook: arvatosystems.ansible_oracle.opatch
 
 - name: Side-Effect - Manage-DB
-  ansible.builtin.import_playbook: opitzconsulting.ansible_oracle.manage_db
+  ansible.builtin.import_playbook: arvatosystems.ansible_oracle.manage_db
   vars:
     restart_spparameter_changed: true
     oracle_databases:

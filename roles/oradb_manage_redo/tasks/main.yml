@@ -10,7 +10,7 @@
         allow_duplicates: false
 
     - name: manage redologs
-      opitzconsulting.ansible_oracle.oracle_redo:
+      arvatosystems.ansible_oracle.oracle_redo:
         hostname: "{{ oracle_hostname }}"
         service_name: "{{ _db_service_name }}"
         port: "{{ _listener_port_cdb }}"
