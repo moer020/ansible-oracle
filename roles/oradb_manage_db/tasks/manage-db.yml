@@ -92,7 +92,7 @@
   when: odb.state == 'present'
 
 - name: manage_db | create/manage database
-  opitzconsulting.ansible_oracle.oracle_db:
+  arvatosystems.ansible_oracle.oracle_db:
     oracle_home: "{{ _oracle_home_db }}"
     port: "{{ listener_port_template }}"
     sys_password: "{{ _oradb_manage_db_dbca_sys_pass }}"
@@ -140,7 +140,7 @@
   when: odb.state == 'absent'
 
 - name: manage_db | remove database
-  opitzconsulting.ansible_oracle.oracle_db:
+  arvatosystems.ansible_oracle.oracle_db:
     oracle_home: "{{ _oracle_home_db }}"
     port: "{{ listener_port_template }}"
     sys_password: "{{ _oradb_manage_db_dbca_sys_pass }}"
