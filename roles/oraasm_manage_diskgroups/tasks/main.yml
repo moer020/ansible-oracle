@@ -1,6 +1,6 @@
 ---
 - name: Manage diskgroups
-  opitzconsulting.ansible_oracle.oracle_asmdg:
+  arvatosystems.ansible_oracle.oracle_asmdg:
     un: sys
     pw: "{{ sysasmpassword }}"
     sn: +ASM

@@ -31,7 +31,7 @@
 # opatch opatchauto rollback needs all subpatch ids from previous installation as list!
 # check for installed patches is done against 1st subpatch
 - name: post_install_patch | Remove opatchauto patches from GI
-  opitzconsulting.ansible_oracle.oracle_opatch:
+  arvatosystems.ansible_oracle.oracle_opatch:
     oracle_home: "{{ oracle_home_gi }}"
     patch_id: "{{ gip_opatch['subpatches'] | join(',') }}"
     patch_version: "{{ gip_opatch.patchversion | default(omit) }}"

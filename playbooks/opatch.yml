@@ -5,5 +5,5 @@
   become: true
   any_errors_fatal: true
   roles:
-    - opitzconsulting.ansible_oracle.oraswdb_manage_patches
-    - opitzconsulting.ansible_oracle.oradb_datapatch
+    - arvatosystems.ansible_oracle.oraswdb_manage_patches
+    - arvatosystems.ansible_oracle.oradb_datapatch

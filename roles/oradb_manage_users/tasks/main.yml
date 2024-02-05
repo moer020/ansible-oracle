@@ -1,6 +1,6 @@
 ---
 - name: Manage users (db/cdb)
-  opitzconsulting.ansible_oracle.oracle_user:
+  arvatosystems.ansible_oracle.oracle_user:
     hostname: "{{ oracle_hostname }}"
     port: "{{ _listener_port_cdb }}"
     service_name: "{{ _db_service_name }}"
@@ -44,7 +44,7 @@
       {{ dbpasswords[odb.0.oracle_db_name][odb.1.schema] | default(default_dbpass) }}
 
 - name: Manage users (pdb)
-  opitzconsulting.ansible_oracle.oracle_user:
+  arvatosystems.ansible_oracle.oracle_user:
     hostname: "{{ oracle_hostname }}"
     port: "{{ _listener_port_pdb }}"
     service_name: "{{ _db_service_pdb }}"

@@ -18,4 +18,4 @@
 
     - name: "Import orasw_download_patches"
       ansible.builtin.import_role:
-        name: opitzconsulting.ansible_oracle.orasw_download_patches
+        name: arvatosystems.ansible_oracle.orasw_download_patches

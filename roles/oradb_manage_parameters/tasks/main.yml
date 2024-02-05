@@ -2,7 +2,7 @@
 # @tag initparams:description: Configure parameter for nonCDB, CDB and PDB
 # @tag initparams_cdb:description: Configure parameter for nonCDB and CDB
 - name: Manage parameters (db/cdb)
-  opitzconsulting.ansible_oracle.oracle_parameter:
+  arvatosystems.ansible_oracle.oracle_parameter:
     hostname: "{{ oracle_hostname }}"
     port: "{{ _listener_port_cdb }}"
     service_name: "{{ _db_service_name }}"
@@ -42,7 +42,7 @@
 
 # @tag initparams_pdb:description: Configure parameter for PDB
 - name: Manage parameters (pdb)
-  opitzconsulting.ansible_oracle.oracle_parameter:
+  arvatosystems.ansible_oracle.oracle_parameter:
     hostname: "{{ oracle_hostname }}"
     service_name: "{{ _db_service_pdb }}"
     port: "{{ _listener_port_pdb }}"
@@ -85,7 +85,7 @@
 
 # @tag spfile_bounce:description: Bounce database when changed parameter need a restart.
 - name: Bounce database to activate changed parameters with scope=spfile
-  opitzconsulting.ansible_oracle.oracle_db:
+  arvatosystems.ansible_oracle.oracle_db:
     oracle_home: "{{ _oracle_home_db }}"
     db_name: "{{ odb.0.oracle_db_name }}"
     db_unique_name: "{{ odb.0.oracle_db_unique_name | default(omit) }}"

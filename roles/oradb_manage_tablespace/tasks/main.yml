@@ -10,7 +10,7 @@
         allow_duplicates: false
 
     - name: manage tablespaces (db/cdb)
-      opitzconsulting.ansible_oracle.oracle_tablespace:
+      arvatosystems.ansible_oracle.oracle_tablespace:
         hostname: "{{ oracle_hostname }}"
         port: "{{ _listener_port_cdb }}"
         service_name: "{{ _db_service_name }}"
@@ -47,7 +47,7 @@
         - odb.0.state | upper == 'PRESENT'
 
     - name: manage tablespaces (pdb)
-      opitzconsulting.ansible_oracle.oracle_tablespace:
+      arvatosystems.ansible_oracle.oracle_tablespace:
         hostname: "{{ oracle_hostname }}"
         port: "{{ _listener_port_pdb }}"
         service_name: "{{ _db_service_pdb }}"

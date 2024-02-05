@@ -1,6 +1,6 @@
 ---
 - name: oradb_tzupgrade | Perform timezone checks for CDB$ROOT and PDB$SEED first
-  opitzconsulting.ansible_oracle.oracle_sqldba:
+  arvatosystems.ansible_oracle.oracle_sqldba:
     catcon_pl: "{{ _oracle_home_db }}/rdbms/admin/utltz_upg_check.sql"
     creates_sql: "{{ _oradb_tzupgrade_tz_check_query }}"
     oracle_home: "{{ _oracle_home_db }}"
@@ -11,7 +11,7 @@
   become: true
 
 - name: oradb_tzupgrade | Upgrade timezone for CDB$ROOT and PDB$SEED
-  opitzconsulting.ansible_oracle.oracle_sqldba:
+  arvatosystems.ansible_oracle.oracle_sqldba:
     catcon_pl: "{{ _oracle_home_db }}/rdbms/admin/utltz_upg_apply.sql"
     creates_sql: "{{ _oradb_tzupgrade_tz_check_query }}"
     oracle_home: "{{ _oracle_home_db }}"
@@ -22,7 +22,7 @@
   become: true
 
 - name: oradb_tzupgrade | Get all open PDBs
-  opitzconsulting.ansible_oracle.oracle_sqldba:
+  arvatosystems.ansible_oracle.oracle_sqldba:
     sqlselect: >-
       select listagg(name, ' ') within group (order by name) pdb_list
       from v$pdbs
@@ -46,7 +46,7 @@
   block:
 
     - name: oradb_tzupgrade | Perform timezone checks for the candidate PDBs
-      opitzconsulting.ansible_oracle.oracle_sqldba:
+      arvatosystems.ansible_oracle.oracle_sqldba:
         catcon_pl: "{{ _oracle_home_db }}/rdbms/admin/utltz_upg_check.sql"
         creates_sql: "{{ _oradb_tzupgrade_tz_check_query }}"
         oracle_home: "{{ _oracle_home_db }}"
@@ -57,7 +57,7 @@
       become: true
 
     - name: oradb_tzupgrade | Upgrade timezone for the candidate PDBs
-      opitzconsulting.ansible_oracle.oracle_sqldba:
+      arvatosystems.ansible_oracle.oracle_sqldba:
         catcon_pl: "{{ _oracle_home_db }}/rdbms/admin/utltz_upg_apply.sql"
         creates_sql: "{{ _oradb_tzupgrade_tz_check_query }}"
         oracle_home: "{{ _oracle_home_db }}"
@@ -68,7 +68,7 @@
       become: true
 
 - name: oradb_tzupgrade | Get post upgrade timezone status info
-  opitzconsulting.ansible_oracle.oracle_sqldba:
+  arvatosystems.ansible_oracle.oracle_sqldba:
     sql: |
       set tab off
       set head on

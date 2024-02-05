@@ -4,16 +4,16 @@
   become: true
   any_errors_fatal: true
   roles:
-    - opitzconsulting.ansible_oracle.oradb_manage_wallet
-    - opitzconsulting.ansible_oracle.oradb_manage_db
-    - opitzconsulting.ansible_oracle.oradb_manage_pdb
-    - opitzconsulting.ansible_oracle.oradb_manage_parameters
-    - opitzconsulting.ansible_oracle.oradb_manage_tablespace
-    - opitzconsulting.ansible_oracle.oradb_manage_redo
-    - opitzconsulting.ansible_oracle.oradb_manage_profiles
-    - opitzconsulting.ansible_oracle.oradb_manage_statspack
-    - opitzconsulting.ansible_oracle.oradb_manage_roles
-    - opitzconsulting.ansible_oracle.oradb_manage_users
-    - opitzconsulting.ansible_oracle.oradb_manage_grants
-    - opitzconsulting.ansible_oracle.oradb_manage_services
-    - opitzconsulting.ansible_oracle.oradb_rman
+    - arvatosystems.ansible_oracle.oradb_manage_wallet
+    - arvatosystems.ansible_oracle.oradb_manage_db
+    - arvatosystems.ansible_oracle.oradb_manage_pdb
+    - arvatosystems.ansible_oracle.oradb_manage_parameters
+    - arvatosystems.ansible_oracle.oradb_manage_tablespace
+    - arvatosystems.ansible_oracle.oradb_manage_redo
+    - arvatosystems.ansible_oracle.oradb_manage_profiles
+    - arvatosystems.ansible_oracle.oradb_manage_statspack
+    - arvatosystems.ansible_oracle.oradb_manage_roles
+    - arvatosystems.ansible_oracle.oradb_manage_users
+    - arvatosystems.ansible_oracle.oradb_manage_grants
+    - arvatosystems.ansible_oracle.oradb_manage_services
+    - arvatosystems.ansible_oracle.oradb_rman

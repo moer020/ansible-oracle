@@ -12,20 +12,20 @@
 
     - name: "Import common"
       ansible.builtin.import_role:
-        name: opitzconsulting.ansible_oracle.common
+        name: arvatosystems.ansible_oracle.common
 
     - name: "Import orahost"
       ansible.builtin.import_role:
-        name: "opitzconsulting.ansible_oracle.orahost"
+        name: "arvatosystems.ansible_oracle.orahost"
 
     - name: "Import orahost_storage"
       ansible.builtin.import_role:
-        name: "opitzconsulting.ansible_oracle.orahost_storage"
+        name: "arvatosystems.ansible_oracle.orahost_storage"
 
     - name: "Import cxoracle"
       ansible.builtin.import_role:
-        name: "opitzconsulting.ansible_oracle.cxoracle"
+        name: "arvatosystems.ansible_oracle.cxoracle"
 
     - name: "Import orahost_logrotate"
       ansible.builtin.import_role:
-        name: "opitzconsulting.ansible_oracle.orahost_logrotate"
+        name: "arvatosystems.ansible_oracle.orahost_logrotate"

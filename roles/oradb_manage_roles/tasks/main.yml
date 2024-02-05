@@ -1,7 +1,7 @@
 ---
 # tasks file for manage-db-users
 - name: Manage roles (cdb)
-  opitzconsulting.ansible_oracle.oracle_role:
+  arvatosystems.ansible_oracle.oracle_role:
     role: "{{ odb.1.name }}"
     state: "{{ odb.1.state }}"
     hostname: "{{ oracle_hostname }}"
@@ -33,7 +33,7 @@
   tags: users,grants
 
 - name: Manage roles (pdb)
-  opitzconsulting.ansible_oracle.oracle_role:
+  arvatosystems.ansible_oracle.oracle_role:
     role: "{{ opdb.1.name }}"
     state: "{{ opdb.1.state }}"
     hostname: "{{ oracle_hostname }}"

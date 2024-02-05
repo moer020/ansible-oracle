@@ -1,14 +1,12 @@
 ---
-namespace: opitzconsulting
+namespace: arvatosystems
 name: ansible_oracle
-description: "Impoartant! This is a beta release! This is the collection of ansible-oracle from https://github.com/oravirt/ansible-oracle"
-version: 4.4.1
-repository: https://github.com/oravirt/ansible-oracle.git
+description: "Impoartant! This is a beta release! This is a fork of the collection of ansible-oracle from https://github.com/oravirt/ansible-oracle"
+version: 0.0.1
+repository: https://github.com/moer020/ansible-oracle.git
 readme: README.md
 authors:
-  - Mikael Sandström
-  - OPITZ CONSULTING
-  - Thorsten Bruhns
+  - Marvin Mörking
 license:
   - "MIT"
 tags:

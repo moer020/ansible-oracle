@@ -3,4 +3,4 @@
   hosts: "{{ hostgroup | default('all') }}"
   any_errors_fatal: true
   roles:
-    - opitzconsulting.ansible_oracle.oradb_manage_wallet
+    - arvatosystems.ansible_oracle.oradb_manage_wallet

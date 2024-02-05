@@ -1,7 +1,7 @@
 ---
 
-disable_selinux: true
-disable_firewall: true
+disable_selinux: false
+disable_firewall: false
 
 
 # @todo improvement: SSH-Setup needs a rework...
@@ -42,7 +42,7 @@ configure_interconnect: false
 configure_oracle_sudo: false
 
 # @var configure_hugepages:description: Configure Hugepages?
-configure_hugepages: true
+configure_hugepages: false
 
 # @var configure_hugepages_by:description: >
 # Defines if percent_hugepages or size_in_gb_hugepages is used to define the Hugepages.
@@ -97,23 +97,15 @@ os_min_supported_version: "{% if ansible_os_family == 'Suse' %}12.1{% else %}6.4
 # Dependent variables are defined in orahost_meta/defaults/main.yml
 # @end
 oracle_groups:
-  - {group: "{{ asmdba_group }}", gid: 54318}
-  - {group: "{{ asmoper_group }}", gid: 54319}
-  - {group: "{{ asmadmin_group }}", gid: 54320}
-  - {group: "{{ oracle_group }}", gid: 54321}
-  - {group: "{{ dba_group }}", gid: 54322}
-  - {group: "{{ oper_group }}", gid: 54324}
-  - {group: backupdba, gid: 54323}
-  - {group: dgdba, gid: 54325}
-  - {group: kmdba, gid: 54326}
+  - {group: "{{ dba_group }}", gid: 200}
 
 # @todo security: remove fixed password from oracle OS-Users
 # @var oracle_users:description: oracle OS-User
 oracle_users:         # Passwd :Oracle123
   - username: oracle
     uid: 54321
-    primgroup: "{{ oracle_group }}"
-    othergroups: "{{ dba_group }},{{ asmadmin_group }},{{ asmdba_group }},{{ asmoper_group }},backupdba,dgdba,kmdba,{{ oper_group }}"
+    primgroup: "{{ dba_group }}"
+    othergroups: "{{ dba_group }}"
     passwd: "$6$0xHoAXXF$K75HKb64Hcb/CEcr3YEj2LGERi/U2moJgsCK.ztGxLsKoaXc4UBiNZPL0hlxB5ng6GL.gyipfQOOXplzcdgvD0"
 
 # @todo security: remove fixed password from grid OS-Users
@@ -121,8 +113,8 @@ oracle_users:         # Passwd :Oracle123
 grid_users:
   - username: grid
     uid: 54320
-    primgroup: "{{ oracle_group }}"
-    othergroups: "{{ asmadmin_group }},{{ asmdba_group }},{{ asmoper_group }},{{ dba_group }}"
+    primgroup: "{{ dba_group }}"
+    othergroups: "{{ dba_group }}"
     passwd: "$6$0xHoAXXF$K75HKb64Hcb/CEcr3YEj2LGERi/U2moJgsCK.ztGxLsKoaXc4UBiNZPL0hlxB5ng6GL.gyipfQOOXplzcdgvD0"
 
 # @var firewall_service:description: >

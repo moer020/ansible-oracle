@@ -3,7 +3,7 @@
 # @todo bug: Role require Oracle Restart/GI at the moment
 
 - name: Create services (db/cdb)
-  opitzconsulting.ansible_oracle.oracle_services:
+  arvatosystems.ansible_oracle.oracle_services:
     name: "{{ odb.1.name }}"
     database_name: "{{ odb.0.oracle_db_name }}"
     preferred_instances: "{{ odb.1.pi | default(omit) }}"
@@ -37,7 +37,7 @@
   tags: create_service,services
 
 - name: Create services (pdb)
-  opitzconsulting.ansible_oracle.oracle_services:
+  arvatosystems.ansible_oracle.oracle_services:
     name: "{{ item.1.name }}"
     database_name: "{{ item.0.cdb }}"
     pi: "{{ item.1.pi | default(omit) }}"
@@ -67,7 +67,7 @@
   tags: create_service,services
 
 - name: Start services (db/cdb)
-  opitzconsulting.ansible_oracle.oracle_services:
+  arvatosystems.ansible_oracle.oracle_services:
     name: "{{ item.1.name }}"
     database_name: "{{ item.0.oracle_db_name }}"
     pdb: "{{ item.0.pdb_name | default(omit) }}"
@@ -94,7 +94,7 @@
   tags: start_service,services
 
 - name: Start services (pdbs)
-  opitzconsulting.ansible_oracle.oracle_services:
+  arvatosystems.ansible_oracle.oracle_services:
     name: "{{ item.1.name }}"
     database_name: "{{ item.0.cdb }}"
     pdb: "{{ item.0.pdb_name | default(omit) }}"
@@ -120,7 +120,7 @@
   tags: start_service,services
 
 - name: Stop services (db/cdb)
-  opitzconsulting.ansible_oracle.oracle_services:
+  arvatosystems.ansible_oracle.oracle_services:
     name: "{{ item.1.name }}"
     database_name: "{{ item.0.oracle_db_name }}"
     pdb: "{{ item.0.pdb_name | default(omit) }}"
@@ -147,7 +147,7 @@
   tags: start_service,services
 
 - name: Stop services (pdbs)
-  opitzconsulting.ansible_oracle.oracle_services:
+  arvatosystems.ansible_oracle.oracle_services:
     name: "{{ item.1.name }}"
     database_name: "{{ item.0.cdb }}"
     pdb: "{{ item.0.pdb_name | default(omit) }}"
@@ -174,7 +174,7 @@
   tags: start_service,services
 
 - name: Remove services (db/cdb)
-  opitzconsulting.ansible_oracle.oracle_services:
+  arvatosystems.ansible_oracle.oracle_services:
     name: "{{ item.1.name }}"
     database_name: "{{ item.0.oracle_db_name }}"
     pdb: "{{ item.0.pdb_name | default(omit) }}"
@@ -201,7 +201,7 @@
   tags: start_service,services
 
 - name: Remove services (pdbs)
-  opitzconsulting.ansible_oracle.oracle_services:
+  arvatosystems.ansible_oracle.oracle_services:
     name: "{{ item.1.name }}"
     database_name: "{{ item.0.cdb }}"
     pdb: "{{ item.0.pdb_name | default(omit) }}"

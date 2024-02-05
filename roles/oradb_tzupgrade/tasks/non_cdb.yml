@@ -1,6 +1,6 @@
 ---
 - name: oradb_tzupgrade | Perform timezone checks for a non-CDB database
-  opitzconsulting.ansible_oracle.oracle_sqldba:
+  arvatosystems.ansible_oracle.oracle_sqldba:
     sql: "@?/rdbms/admin/utltz_upg_check.sql"
     creates_sql: "{{ _oradb_tzupgrade_tz_check_query }}"
     oracle_home: "{{ _oracle_home_db }}"
@@ -9,7 +9,7 @@
   become_user: "{{ oracle_user }}"
 
 - name: oradb_tzupgrade | Apply the timezone upgrade for the non-CDB database
-  opitzconsulting.ansible_oracle.oracle_sqldba:
+  arvatosystems.ansible_oracle.oracle_sqldba:
     sql: "@?/rdbms/admin/utltz_upg_apply.sql"
     creates_sql: "{{ _oradb_tzupgrade_tz_check_query }}"
     oracle_home: "{{ _oracle_home_db }}"
@@ -18,7 +18,7 @@
   become_user: "{{ oracle_user }}"
 
 - name: oradb_tzupgrade | Get post upgrade timezone status info
-  opitzconsulting.ansible_oracle.oracle_sqldba:
+  arvatosystems.ansible_oracle.oracle_sqldba:
     sql: |
       set lines 200
       set head on

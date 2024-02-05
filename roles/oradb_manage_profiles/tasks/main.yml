@@ -10,7 +10,7 @@
         allow_duplicates: false
 
     - name: manage profiles (cdb)
-      opitzconsulting.ansible_oracle.oracle_profile:
+      arvatosystems.ansible_oracle.oracle_profile:
         name: "{{ odb.1.name }}"
         state: "{{ odb.1.state }}"
         attribute_name: "{{ __attr_name_odb | default(omit) }}"
@@ -58,7 +58,7 @@
 
 
     - name: manage profiles (pdb)
-      opitzconsulting.ansible_oracle.oracle_profile:
+      arvatosystems.ansible_oracle.oracle_profile:
         name: "{{ opdb.1.name }}"
         state: "{{ opdb.1.state }}"
         attribute_name: "{{ __attr_name_opdb | default(omit) }}"

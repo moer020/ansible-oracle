@@ -17,7 +17,7 @@
     - lsnrinst.state | lower == 'present'
 
 - name: oradb_datapatch | Start database
-  opitzconsulting.ansible_oracle.oracle_db:
+  arvatosystems.ansible_oracle.oracle_db:
     oracle_home: "{{ _oracle_home_db }}"
     db_name: "{{ odb.oracle_db_name }}"
     db_unique_name: "{{ odb.oracle_db_unique_name | default(omit) }}"
@@ -38,7 +38,7 @@
 
 # @todo bug: Do we really need db-connection here?
 - name: oradb_datapatch | Run datapatch
-  opitzconsulting.ansible_oracle.oracle_datapatch:
+  arvatosystems.ansible_oracle.oracle_datapatch:
     oracle_home: "{{ _oracle_home_db }}"
     db_name: "{{ odb.0.oracle_db_name }}"
     db_unique_name: "{{ odb.0.oracle_db_unique_name | default(omit) }}"

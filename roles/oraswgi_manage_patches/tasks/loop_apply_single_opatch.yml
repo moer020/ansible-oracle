@@ -4,7 +4,7 @@
   ansible.builtin.include_tasks: roothas_prepatch.yml
 
 - name: loop_apply_single_opatch | Manage non opatchauto patches for GI
-  opitzconsulting.ansible_oracle.oracle_opatch:
+  arvatosystems.ansible_oracle.oracle_opatch:
     oracle_home: "{{ oracle_home_gi }}"
     patch_base: "{{ oracle_patch_install }}/{{ oracle_install_version_gi }}/{{ item.path | default(item.patchid) }}/"
     patch_id: "{{ item.patchid }}"

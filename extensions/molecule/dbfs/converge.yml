@@ -11,10 +11,10 @@
       when: ansible_distribution_major_version | int == 9
 
 - name: Converge os
-  ansible.builtin.import_playbook: opitzconsulting.ansible_oracle.os
+  ansible.builtin.import_playbook: arvatosystems.ansible_oracle.os
 
 - name: Converge swdb
-  ansible.builtin.import_playbook: opitzconsulting.ansible_oracle.swdb
+  ansible.builtin.import_playbook: arvatosystems.ansible_oracle.swdb
   vars:
     # install it directly from remote in this test
     # => Do not copy the installation media into container
@@ -23,7 +23,7 @@
     oracle_stage_remote: /vagrant
 
 - name: Converge sql_zauberkastern
-  ansible.builtin.import_playbook: opitzconsulting.ansible_oracle.sql_zauberkastern
+  ansible.builtin.import_playbook: arvatosystems.ansible_oracle.sql_zauberkastern
 
 - name: Converge manage_db
-  ansible.builtin.import_playbook: opitzconsulting.ansible_oracle.manage_db
+  ansible.builtin.import_playbook: arvatosystems.ansible_oracle.manage_db

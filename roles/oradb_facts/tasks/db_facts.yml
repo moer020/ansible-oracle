@@ -1,7 +1,7 @@
 ---
 # @todo bug: parameter user, password and sysdba needs a refactoring
 - name: Gather Facts from Database
-  opitzconsulting.ansible_oracle.oracle_facts:
+  arvatosystems.ansible_oracle.oracle_facts:
     hostname: "{{ oracle_hostname }}"
     port: "{{ _listener_port_cdb }}"
     service_name: "{{ _db_service_name }}"

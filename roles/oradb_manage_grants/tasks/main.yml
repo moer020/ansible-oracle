@@ -1,6 +1,6 @@
 ---
 - name: Manage role grants (cdb)
-  opitzconsulting.ansible_oracle.oracle_grants:
+  arvatosystems.ansible_oracle.oracle_grants:
     role: "{{ odb.1.name }}"
     state: "{{ odb.1.state }}"
     grants: "{{ odb.1.grants | default(omit) }}"
@@ -39,7 +39,7 @@
     - grants
 
 - name: Manage role grants (pdb)
-  opitzconsulting.ansible_oracle.oracle_grants:
+  arvatosystems.ansible_oracle.oracle_grants:
     role: "{{ opdb.1.name }}"
     state: "{{ opdb.1.state }}"
     grants: "{{ opdb.1.grants | default(omit) }}"
@@ -83,7 +83,7 @@
 
 # @todo bug: Manage schema grants (cdb) with state: abesent not working
 - name: Manage schema grants (cdb)
-  opitzconsulting.ansible_oracle.oracle_grants:
+  arvatosystems.ansible_oracle.oracle_grants:
     schema: "{{ odb.1.schema }}"
     state: "{{ odb.1.state | default('present') }}"
     grants: "{{ odb.1.grants | default(omit) }}"
@@ -122,7 +122,7 @@
     - grants
 
 - name: Manage schema grants (pdb)
-  opitzconsulting.ansible_oracle.oracle_grants:
+  arvatosystems.ansible_oracle.oracle_grants:
     schema: "{{ opdb.1.schema }}"
     state: "{{ opdb.1.state }}"
     grants: "{{ opdb.1.grants | default(omit) }}"

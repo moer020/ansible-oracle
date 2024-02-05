@@ -116,7 +116,7 @@
             - item.changed or item.failed
 
 - name: Create/modify Purge Job
-  opitzconsulting.ansible_oracle.oracle_job:
+  arvatosystems.ansible_oracle.oracle_job:
     hostname: "{{ oracle_hostname }}"
     service_name: "{{ _db_service_name }}"
     port: "{{ _listener_port_cdb }}"
@@ -148,7 +148,7 @@
     - statspack
 
 - name: Create/modify Snapshot Job
-  opitzconsulting.ansible_oracle.oracle_job:
+  arvatosystems.ansible_oracle.oracle_job:
     hostname: "{{ oracle_hostname }}"
     service_name: "{{ _db_service_name }}"
     port: "{{ _listener_port_cdb }}"
@@ -279,7 +279,7 @@
         - item.changed or item.failed
 
 - name: Create/Modify Purge Job (PDB)
-  opitzconsulting.ansible_oracle.oracle_job:
+  arvatosystems.ansible_oracle.oracle_job:
     hostname: "{{ oracle_hostname }}"
     service_name: "{{ _db_service_pdb }}"
     port: "{{ _listener_port_pdb }}"
@@ -318,7 +318,7 @@
     - statspack
 
 - name: Create/Modify Snapshot Job (PDB)
-  opitzconsulting.ansible_oracle.oracle_job:
+  arvatosystems.ansible_oracle.oracle_job:
     hostname: "{{ oracle_hostname }}"
     service_name: "{{ _db_service_pdb }}"
     port: "{{ _listener_port_pdb }}"

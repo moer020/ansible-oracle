@@ -54,7 +54,7 @@
 
 # opatchauto needs root user for execution
 - name: loop_Patchid | Manage patch for DB
-  opitzconsulting.ansible_oracle.oracle_opatch:
+  arvatosystems.ansible_oracle.oracle_opatch:
     oracle_home: "{{ oracle_home_db }}"
     patch_base: >-
       {{ oracle_patch_install }}/{{ db_version }}/{{ dhc_opatch.path | default(__patch_localsubdir) }}

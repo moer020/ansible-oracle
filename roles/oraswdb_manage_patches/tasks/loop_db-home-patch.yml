@@ -45,7 +45,7 @@
     - ocmconfig
 
 - name: Remove unwanted patches from DB
-  opitzconsulting.ansible_oracle.oracle_opatch:
+  arvatosystems.ansible_oracle.oracle_opatch:
     oracle_home: "{{ oracle_home_db }}"
     patch_base: "{{ oracle_patch_install }}/{{ db_version }}/{{ item.path | default(item.patchid) }}/"
     patch_id: "{{ item.patchid }}"
@@ -70,7 +70,7 @@
   register: psuapplym
 
 - name: Manage opatchauto patches for DB (non-gi)
-  opitzconsulting.ansible_oracle.oracle_opatch:
+  arvatosystems.ansible_oracle.oracle_opatch:
     oracle_home: "{{ oracle_home_db }}"
     patch_base: "{{ oracle_patch_install }}/{{ db_version }}/{{ item.0.path | default (item.0.patchid) }}/{{ item.1 }}"
     patch_id: "{{ item.1 }}"
