@@ -27,4 +27,4 @@ use_proxy: false
 # The variable is used by `user_proxy` and `http_proxy`.
 # @end
 # @var extra_args: $ "_unset_"
-extra_args: "{% if use_proxy %}--proxy={{ http_proxy }}{% else %}{% endif %}"
+extra_args: "--user {% if use_proxy %}--proxy={{ http_proxy }}{% else %}{% endif %}"

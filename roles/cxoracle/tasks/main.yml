@@ -3,6 +3,8 @@
 # The ansible-oracle modules are using Python3 only
 # => Install cx_Oracle for Python3 only
 - name: Install cx_oracle for Python3
+  sudo: true
+  sudo_user: oracle
   ansible.builtin.pip:
     name: "{{ cx_oracle3_source | default(cx_oracle_source) | default('cx_oracle') }}"
     executable: pip3
